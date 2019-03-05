@@ -206,29 +206,23 @@ if ( ! function_exists( 'pluton_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
+    wp_register_style( 'Bootstrap', get_template_directory_uri() . '/css/bootstrap.css', null, ' v2.3.2', 'all' );
+    wp_enqueue_style( 'Bootstrap' );
+
+    wp_enqueue_style( 'Bootstrap Responsive ', get_template_directory_uri() . '/css/bootstrap-responsive.css', null, 'v2.3.2', 'all' );
+
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', null, null, 'all' );
+
+    wp_enqueue_style( 'pluton', get_template_directory_uri() . '/css/pluton.css', null, null, 'all' );
+
+    wp_enqueue_style( 'jquery_slider', get_template_directory_uri() . '/css/jquery.cslider.css', null, null, 'all' );
+
+    wp_enqueue_style( 'jquery_bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', null, null, 'all' );
+
+    wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', null, null, 'all' );
+
     wp_deregister_style( 'style-1' );
     wp_enqueue_style( 'style-1', 'http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext', false, null, 'all');
-
-    wp_deregister_style( 'bootstrap' );
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', false, null, 'all');
-
-    wp_deregister_style( 'bootstrapresponsive' );
-    wp_enqueue_style( 'bootstrapresponsive', get_template_directory_uri() . '/css/bootstrap-responsive.css', false, null, 'all');
-
-    wp_deregister_style( 'style' );
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', false, null, 'all');
-
-    wp_deregister_style( 'pluton' );
-    wp_enqueue_style( 'pluton', get_template_directory_uri() . '/css/pluton.css', false, null, 'all');
-
-    wp_deregister_style( 'jquerycslider' );
-    wp_enqueue_style( 'jquerycslider', get_template_directory_uri() . '/css/jquery.cslider.css', false, null, 'all');
-
-    wp_deregister_style( 'jquerybxslider' );
-    wp_enqueue_style( 'jquerybxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', false, null, 'all');
-
-    wp_deregister_style( 'animate' );
-    wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 

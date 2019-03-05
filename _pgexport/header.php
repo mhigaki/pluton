@@ -15,11 +15,6 @@
             <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/pluton-ie7.css" />
         <![endif]-->
         <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/ico/apple-touch-icon-144.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/ico/apple-touch-icon-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/apple-touch-icon-72.png">
-        <link rel="apple-touch-icon-precomposed" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/ico/apple-touch-icon-57.png">
-        <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/ico/favicon.ico">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
     </head>

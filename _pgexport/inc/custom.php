@@ -1,4 +1,8 @@
 <?php
+//* Set the content width based on the theme's design and stylesheet.
+if (!isset($content_width)) {
+	$content_width = 848; /* pixels */
+}
 // Customize function.
 if ( ! function_exists( 'pluton_customize_name_panel_section' ) ) {
   // Customize Register action.
@@ -26,6 +30,4 @@ if ( ! function_exists( 'pluton_customize_name_panel_section' ) ) {
 
   }
 }
-
-
-?>
+  ?>

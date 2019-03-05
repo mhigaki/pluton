@@ -65,6 +65,17 @@ function pluton_init() {
      */
     /* Pinegrow generated Custom Post Types Begin */
 
+    register_post_type('team', array(
+    'labels' => 
+      array(
+        'name' => __( 'Team members', 'pluton' ),
+        'singular_name' => __( 'Team member', 'pluton' )
+      ),
+    'public' => true,
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+    'show_in_menu' => true
+  ));
+
     /* Pinegrow generated Custom Post Types End */
 
     /*
@@ -157,69 +168,61 @@ if ( ! function_exists( 'pluton_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_deregister_script( 'jquery' );
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, null, true);
+    wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', null, null, true );
+    wp_enqueue_script( 'jquery' );
 
-    wp_deregister_script( 'jquerymixitup' );
-    wp_enqueue_script( 'jquerymixitup', get_template_directory_uri() . '/js/jquery.mixitup.js', false, null, true);
+    wp_register_script( 'jquerymixitup', get_template_directory_uri() . '/js/jquery.mixitup.js', null, null, true );
+    wp_enqueue_script( 'jquerymixitup' );
 
-    wp_deregister_script( 'bootstrap' );
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', false, null, true);
+    wp_register_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', null, null, true );
+    wp_enqueue_script( 'bootstrap' );
 
-    wp_deregister_script( 'modernizrcustom' );
-    wp_enqueue_script( 'modernizrcustom', get_template_directory_uri() . '/js/modernizr.custom.js', false, null, true);
+    wp_register_script( 'modernizrcustom', get_template_directory_uri() . '/js/modernizr.custom.js', null, null, true );
+    wp_enqueue_script( 'modernizrcustom' );
 
-    wp_deregister_script( 'jquerybxslider' );
-    wp_enqueue_script( 'jquerybxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', false, null, true);
+    wp_register_script( 'jquerybxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', null, null, true );
+    wp_enqueue_script( 'jquerybxslider' );
 
-    wp_deregister_script( 'jquerycslider' );
-    wp_enqueue_script( 'jquerycslider', get_template_directory_uri() . '/js/jquery.cslider.js', false, null, true);
+    wp_register_script( 'jquerycslider', get_template_directory_uri() . '/js/jquery.cslider.js', null, null, true );
+    wp_enqueue_script( 'jquerycslider' );
 
-    wp_deregister_script( 'jqueryplaceholder' );
-    wp_enqueue_script( 'jqueryplaceholder', get_template_directory_uri() . '/js/jquery.placeholder.js', false, null, true);
+    wp_register_script( 'jqueryplaceholder', get_template_directory_uri() . '/js/jquery.placeholder.js', null, null, true );
+    wp_enqueue_script( 'jqueryplaceholder' );
 
-    wp_deregister_script( 'jqueryinview' );
-    wp_enqueue_script( 'jqueryinview', get_template_directory_uri() . '/js/jquery.inview.js', false, null, true);
+    wp_register_script( 'jqueryinview', get_template_directory_uri() . '/js/jquery.inview.js', null, null, true );
+    wp_enqueue_script( 'jqueryinview' );
 
-    wp_deregister_script( 'script-1' );
-    wp_enqueue_script( 'script-1', 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap', false, null, true);
+    wp_register_script( 'script-1', 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap', null, null, true );
+    wp_enqueue_script( 'script-1' );
 
-    wp_deregister_script( 'app' );
-    wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', false, null, true);
+    wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', null, null, true );
+    wp_enqueue_script( 'app' );
 
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js' );
+    wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js' );
 
     wp_enqueue_script( 'ieviewportbugworkaround', get_template_directory_uri() . '/assets/js/ie10-viewport-bug-workaround.js' );
-
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js' );
 
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
 
+    wp_register_style( 'Bootstrap', get_template_directory_uri() . '/css/bootstrap.css', null, ' v2.3.2', 'all' );
+    wp_enqueue_style( 'Bootstrap' );
+
+    wp_enqueue_style( 'Bootstrap Responsive ', get_template_directory_uri() . '/css/bootstrap-responsive.css', null, 'v2.3.2', 'all' );
+
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', null, null, 'all' );
+
+    wp_enqueue_style( 'pluton', get_template_directory_uri() . '/css/pluton.css', null, null, 'all' );
+
+    wp_enqueue_style( 'jquery_slider', get_template_directory_uri() . '/css/jquery.cslider.css', null, null, 'all' );
+
+    wp_enqueue_style( 'jquery_bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', null, null, 'all' );
+
+    wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', null, null, 'all' );
+
     wp_deregister_style( 'style-1' );
     wp_enqueue_style( 'style-1', 'http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext', false, null, 'all');
-
-    wp_deregister_style( 'bootstrap' );
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', false, null, 'all');
-
-    wp_deregister_style( 'bootstrapresponsive' );
-    wp_enqueue_style( 'bootstrapresponsive', get_template_directory_uri() . '/css/bootstrap-responsive.css', false, null, 'all');
-
-    wp_deregister_style( 'style' );
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', false, null, 'all');
-
-    wp_deregister_style( 'pluton' );
-    wp_enqueue_style( 'pluton', get_template_directory_uri() . '/css/pluton.css', false, null, 'all');
-
-    wp_deregister_style( 'jquerycslider' );
-    wp_enqueue_style( 'jquerycslider', get_template_directory_uri() . '/css/jquery.cslider.css', false, null, 'all');
-
-    wp_deregister_style( 'jquerybxslider' );
-    wp_enqueue_style( 'jquerybxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', false, null, 'all');
-
-    wp_deregister_style( 'animate' );
-    wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
