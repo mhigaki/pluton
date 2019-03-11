@@ -18,11 +18,11 @@ if ( ! function_exists( 'pluton_customize_name_panel_section' ) ) {
   function pluton_customize_name_panel_section( $wp_customize ) {
 
     // Theme Settings
-    $wp_customize->add_panel( 'pluton_panel',
+    $wp_customize->add_panel( '01_panel_settings',
       array(
         'capability'      => 'edit_theme_options',
         'description'      => esc_html__( 'description', 'pluton' ),
-        'priority'      => 10,
+        'priority'      => 1,
         'theme_supports'    => '',
         'title'        => esc_html__( 'Theme Settings', 'pluton' ),
       )

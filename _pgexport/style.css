@@ -1,12 +1,23 @@
 /*
-Theme Name: pluton
-Theme URI: https://github.com/mhigaki/pluton
+Theme Name: Theme Pluton
+Theme URI: https://mhigaki.github.io/pluton/
 Author: Milton Higaki
-Author URI: A link to an author's personal web site or project/development website.
-Description: It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Author URI: https://github.com/mhigaki
+Description: Convert HTML5 to Wordpress | by Pinegrow
 Version: 1.0
-License: The type of license chosen for the theme.
-License URI: A link to the license description.
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pluton
 */
+
+/* sct_about
+sct_portfolio
+sct_service
+sct_client
+sct_price
+sct_contact
+sct_home
+sct_slider
+sct_project
+sct_testemonial
+sct_newsletter */

@@ -1,12 +1,23 @@
 /*
-Theme Name: pluton
-Theme URI: https://www.pluton.com
-Author: higatech
-Author URI: A link to an author's personal web site or project/development website.
-Description: A description of the theme.
-Version: The version number of the theme.
-License: The type of license chosen for the theme.
-License URI: A link to the license description.
-Tags: A list of tags, separated by commas. A full list of recommended tags can be found by selecting "Feature Filter" in the Themes Directory.
+Theme Name: Theme Pluton
+Theme URI: https://mhigaki.github.io/pluton/
+Author: Milton Higaki
+Author URI: https://github.com/mhigaki
+Description: Convert HTML5 to Wordpress | by Pinegrow
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pluton
 */
+
+/* sct_about
+sct_portfolio
+sct_service
+sct_client
+sct_price
+sct_contact
+sct_home
+sct_slider
+sct_project
+sct_testemonial
+sct_newsletter */

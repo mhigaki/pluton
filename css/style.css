@@ -500,11 +500,12 @@ p {
 .service,
 .service h2 {
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .service p {
-    padding: 0px 50px;
-    height: 60px;
+    padding: 0px 30px;
+    height: 100px;
 }
 
 .service img {
@@ -976,7 +977,7 @@ p {
 /*
 3.8 Footer
 ********************************************************************/
-#footer {
+.footer {
     background: #181A1C;
     text-align: center;
 }

@@ -70,7 +70,7 @@
     // Bind to scroll
     $(window).scroll(function () {
 
-        //Display or hide scroll to top button
+        //Display or hide scroll to top button 
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
@@ -297,8 +297,8 @@ $("#send-mail").click(function () {
     /************************
     Animate elements
     *************************/
-
-    //Animate thumbnails
+    
+    //Animate thumbnails 
     jQuery('.thumbnail').one('inview', function (event, visible) {
         if (visible == true) {
             jQuery(this).addClass("animated fadeInDown");
@@ -315,7 +315,7 @@ $("#send-mail").click(function () {
             jQuery(this).removeClass("animated fadeInDown");
         }
     });
-
+    
     //animate first team member
     jQuery('#first-person').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -324,7 +324,7 @@ $("#send-mail").click(function () {
             jQuery('#first-person').removeClass("animated pulse");
         }
     });
-
+    
     //animate sectond team member
     jQuery('#second-person').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -342,7 +342,7 @@ $("#send-mail").click(function () {
             jQuery('#third-person').removeClass("animated pulse");
         }
     });
-
+    
     //Animate price columns
     jQuery('.price-column, .testimonial').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -351,7 +351,7 @@ $("#send-mail").click(function () {
             jQuery(this).removeClass("animated fadeInDown");
         }
     });
-
+    
     //Animate contact form
     jQuery('.contact-form').bind('inview', function (event, visible) {
         if (visible == true) {
@@ -377,8 +377,8 @@ $("#send-mail").click(function () {
 
 function initializeMap() {
 
-    var lat = '46.6367464'; //Set your latitude.
-    var lon = '23.6204624'; //Set your longitude.
+    var lat = '44.8164056'; //Set your latitude.
+    var lon = '20.46090424'; //Set your longitude.
 
     var centerLon = lon - 0.0105;
 
@@ -392,7 +392,7 @@ function initializeMap() {
     };
 
     //Bind map to elemet with id map-canvas
-    var map = new google.maps.Map(document.getElementById('123map-canvas'), myOptions);
+    var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
     var marker = new google.maps.Marker({
         map: map,
         position: new google.maps.LatLng(lat, lon),
