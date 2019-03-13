@@ -76,14 +76,14 @@ function pluton_init() {
     'show_in_menu' => true
   ));
 
-    register_post_type('our_team', array(
+    register_post_type('my_team', array(
     'labels' => 
       array(
-        'name' => __( 'Ours Team', 'pluton' ),
-        'singular_name' => __( 'Our Team', 'pluton' )
+        'name' => __( 'Team Members', 'pluton' ),
+        'singular_name' => __( 'Team Member', 'pluton' )
       ),
     'public' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+    'supports' => array( 'title', 'thumbnail', 'custom-fields' ),
     'show_in_menu' => true
   ));
 
@@ -111,15 +111,6 @@ function pluton_widgets_init() {
      */
     /* Pinegrow generated Register Sidebars Begin */
 
-    register_sidebar( array(
-    'name' => __( 'Skill', 'pluton' ),
-    'id' => 'skill',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<h3 class="widgettitle">',
-    'after_title' => '</h3>'
-  ) );
-
     /* Pinegrow generated Register Sidebars End */
 }
 add_action( 'widgets_init', 'pluton_widgets_init' );
@@ -134,17 +125,18 @@ function pluton_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    $wp_customize->add_section( 'section_services', array(
-    'title' => __( 'Services', 'pluton' ),
-    'panel' => '01_panel_settings'
-  ));
-
-    $wp_customize->add_section( 'slider', array(
+    $wp_customize->add_section( 'sct_slider', array(
     'title' => __( 'Slider', 'pluton' ),
     'panel' => '01_panel_settings',
     'priority' => '01'
   ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
+
+    $wp_customize->add_section( 'full_sections', array(
+    'title' => __( '01.Full Sections', 'pluton' ),
+    'description' => __( 'Please inform the page of each section ', 'pluton' ),
+    'panel' => '01_panel_settings'
+  ));
 
     $wp_customize->add_setting( 'custom_logo', array(
     'type' => 'theme_mod',
@@ -166,7 +158,12 @@ function pluton_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'page_slider_01', array(
     'label' => __( '01 Slider', 'pluton' ),
     'type' => 'dropdown-pages',
-    'section' => 'slider'
+    'section' => 'sct_slider',
+    'input_attrs' => 
+      array(
+        'style' => 'dropdown-menu',
+        'placeholder' => 'cade'
+      )
   ));
 
     $wp_customize->add_setting( '01_slide_link', array(
@@ -188,7 +185,7 @@ function pluton_customize_register( $wp_customize ) {
     $wp_customize->add_control( '01_slide_text', array(
     'label' => __( 'Button Text', 'pluton' ),
     'type' => 'text',
-    'section' => 'slider'
+    'section' => 'sct_slider'
   ));
 
     $wp_customize->add_setting( 'page_slider_02', array(
@@ -235,15 +232,70 @@ function pluton_customize_register( $wp_customize ) {
     'section' => 'slider'
   ));
 
-    $wp_customize->add_setting( 'sct_service_page', array(
+    $wp_customize->add_setting( 'sct_service_p', array(
     'type' => 'theme_mod',
     'sanitize_callback' => $pgwp_sanitize
   ));
 
-    $wp_customize->add_control( 'sct_service_page', array(
-    'label' => __( 'Page Select', 'pluton' ),
+    $wp_customize->add_control( 'sct_service_p', array(
+    'label' => __( 'Services', 'pluton' ),
     'type' => 'dropdown-pages',
-    'section' => 'section_services'
+    'section' => 'full_sections'
+  ));
+
+    $wp_customize->add_setting( 'sct_portfolio_p', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'sct_portfolio_p', array(
+    'label' => __( 'Portfolio', 'pluton' ),
+    'type' => 'dropdown-pages',
+    'section' => 'full_sections'
+  ));
+
+    $wp_customize->add_setting( 'sct_team_p', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'sct_team_p', array(
+    'label' => __( 'Team', 'pluton' ),
+    'type' => 'dropdown-pages',
+    'section' => 'full_sections'
+  ));
+
+    $wp_customize->add_setting( 'sct_about_p', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'sct_about_p', array(
+    'label' => __( 'About', 'pluton' ),
+    'type' => 'dropdown-pages',
+    'section' => 'full_sections'
+  ));
+
+    $wp_customize->add_setting( 'sct_testemonial_p', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'sct_testemonial_p', array(
+    'label' => __( 'Testemonial', 'pluton' ),
+    'type' => 'dropdown-pages',
+    'section' => 'full_sections'
+  ));
+
+    $wp_customize->add_setting( 'sct_price_p', array(
+    'type' => 'theme_mod',
+    'sanitize_callback' => $pgwp_sanitize
+  ));
+
+    $wp_customize->add_control( 'sct_price_p', array(
+    'label' => __( 'Price Table', 'pluton' ),
+    'type' => 'dropdown-pages',
+    'section' => 'full_sections'
   ));
 
     /* Pinegrow generated Customizer Controls End */
@@ -292,6 +344,9 @@ if ( ! function_exists( 'pluton_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
+    wp_register_style( 'style-1', 'http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext', null, null, 'all' );
+    wp_enqueue_style( 'style-1' );
+
     wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', null, null, 'all' );
     wp_enqueue_style( 'bootstrap' );
 
@@ -313,9 +368,6 @@ if ( ! function_exists( 'pluton_enqueue_scripts' ) ) :
     wp_register_style( 'animate', get_template_directory_uri() . '/css/animate.css', null, null, 'all' );
     wp_enqueue_style( 'animate' );
 
-    wp_deregister_style( 'style-1' );
-    wp_enqueue_style( 'style-1', 'http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext', false, null, 'all');
-
     /* Pinegrow generated Enqueue Styles End */
 
     }
@@ -327,7 +379,6 @@ function pgwp_sanitize_placeholder($input) { return $input; }
  * Resource files included by Pinegrow.
  */
 /* Pinegrow generated Include Resources Begin */
-require_once "inc/wp_smart_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
     require_once "inc/custom.php";

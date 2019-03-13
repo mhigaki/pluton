@@ -336,9 +336,9 @@ p {
 .thumbnail h3,
 .thumbnail p {
     margin: 0;
-    padding: 0;
     position: relative;
     z-index: 4;
+    padding: 0;
 }
 
 .thumbnail h3 {
