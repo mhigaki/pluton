@@ -705,7 +705,7 @@
       </div>
       <div class="section third-section">
         <div class="container centered">
-          <div class="sub-section">
+        <div class="sub-section">
             <div class="title clearfix">
               <div class="pull-left">
                 <h3 cms-editable="sct_client_main" cms-editable-type="content" cms-editable-label="Main Heading" cms-editable-section="sct_client">Our Clients</h3>
@@ -716,40 +716,41 @@
               </ul>
             </div>
             <ul class="row client-slider" id="clint-slider">
-              <li wp-post-class wp-the-id wp-loop="ours_clients" wp-loop-orderby="date" wp-loop-order="ASC" wp-loop-nopaging="true" wp-loop-category-name="clients" wp-loop-post-type="post" wp-loop-post-status="publish">
-                <img src="images/clients/ClientLogo01.png" alt="client logo 1" cms-post-image="normal">
+              <li cms-post cms-post-type="ours_clients">
+                <img src="images/clients/ClientLogo01.png" alt="client logo 1" wp-call-function="$image['url'];" wp-call-function-echo="true">
               </li>
-              <li data-pg-collapsed cms-no-export>
+              <li>
                 <a href="">
                   <img src="images/clients/ClientLogo02.png" alt="client logo 2">
                 </a>
               </li>
-              <li data-pg-collapsed cms-no-export>
+              <li>
                 <a href="">
                   <img src="images/clients/ClientLogo03.png" alt="client logo 3">
                 </a>
               </li>
-              <li data-pg-collapsed cms-no-export>
+              <li>
                 <a href="">
                   <img src="images/clients/ClientLogo04.png" alt="client logo 4">
                 </a>
               </li>
-              <li data-pg-collapsed cms-no-export>
+              <li>
                 <a href="">
                   <img src="images/clients/ClientLogo05.png" alt="client logo 5">
                 </a>
               </li>
-              <li data-pg-collapsed cms-no-export>
+              <li>
                 <a href="">
                   <img src="images/clients/ClientLogo02.png" alt="client logo 6">
                 </a>
               </li>
-              <li data-pg-collapsed cms-no-export>
+              <li>
                 <a href="">
                   <img src="images/clients/ClientLogo04.png" alt="client logo 7">
                 </a>
               </li>
             </ul>
+          <?php endif; ?>
           </div>
         </div>
       </div>

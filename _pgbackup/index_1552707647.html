@@ -716,8 +716,8 @@
               </ul>
             </div>
             <ul class="row client-slider" id="clint-slider">
-              <li wp-post-class wp-the-id wp-loop="ours_clients" wp-loop-orderby="date" wp-loop-order="ASC" wp-loop-nopaging="true" wp-loop-category-name="clients" wp-loop-post-type="post" wp-loop-post-status="publish">
-                <img src="images/clients/ClientLogo01.png" alt="client logo 1" cms-post-image="normal">
+              <li cms-post cms-post-type="ours_clients" data-pg-collapsed>
+                <img src="images/clients/ClientLogo01.png" alt="client logo 1" wp-call-function="$image['url'];" wp-call-function-echo="true">
               </li>
               <li data-pg-collapsed cms-no-export>
                 <a href="">

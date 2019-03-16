@@ -18,7 +18,7 @@
         <!-- Contact section edn -->
         <!-- Footer section start -->
         <div class="footer" style="background-color: #2e2b2b;">
-            <p><?php _e( '&copy; 2013 Theme by', 'pluton' ); ?> <a href="http://www.graphberry.com"><?php _e( 'GraphBerry', 'pluton' ); ?></a><?php _e( ',', 'pluton' ); ?> <a href="http://goo.gl/NM84K2"><?php _e( 'Documentation', 'pluton' ); ?></a></p>
+            <p> <?php _e( '@ 2013 Theme by', 'pluton' ); ?> <a href="http://www.graphberry.com"><?php _e( 'GraphBerry', 'pluton' ); ?></a><?php _e( ',', 'pluton' ); ?> <a href="http://goo.gl/NM84K2"><?php _e( 'Documentation', 'pluton' ); ?></a></p>
         </div>
         <!-- Footer section end -->
         <!-- ScrollUp button start -->

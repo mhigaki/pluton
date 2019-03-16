@@ -166,7 +166,7 @@
         if (error === false) {
             $.ajax({
                 type: 'POST',
-                url: 'php/newsletter.php',
+                url: 'newsletter.php',
 
                 data: {
                     email: $('#nlmail').val()
@@ -392,7 +392,7 @@ function initializeMap() {
     };
 
     //Bind map to elemet with id map-canvas
-    var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
     var marker = new google.maps.Marker({
         map: map,
         position: new google.maps.LatLng(lat, lon),

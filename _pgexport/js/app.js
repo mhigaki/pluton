@@ -166,7 +166,7 @@
         if (error === false) {
             $.ajax({
                 type: 'POST',
-                url: 'php/newsletter.php',
+                url: 'newsletter.php',
 
                 data: {
                     email: $('#nlmail').val()
@@ -377,8 +377,8 @@ $("#send-mail").click(function () {
 
 function initializeMap() {
 
-    var lat = '-23.6234464'; //Set your latitude.
-    var lon = '46.6418739'; //Set your longitude.
+    var lat = '-23.621137'; //Set your latitude.
+    var lon = '-46.632160'; //Set your longitude.
 
     var centerLon = lon - 0.0105;
 
@@ -392,7 +392,7 @@ function initializeMap() {
     };
 
     //Bind map to elemet with id map-canvas
-    var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
     var marker = new google.maps.Marker({
         map: map,
         position: new google.maps.LatLng(lat, lon),
@@ -400,7 +400,7 @@ function initializeMap() {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: 'AIzaSyDpMlMSNaJxZuxYgFKEB6AOMMS9oo_o0Ao'
+        content: "Pluton"
     });
 
     google.maps.event.addListener(marker, 'click', function () {

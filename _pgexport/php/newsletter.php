@@ -2,7 +2,7 @@
 
 if($_POST){
 
-    $fileName = 'newsletter.txt'; //set 777 permision for this file.
+    $fileName = 'newslatter.txt'; //set 777 permision for this file.
     $error = false;
 
     $email = $_POST['email'];
@@ -13,9 +13,9 @@ if($_POST){
 
     //If all ok, save emali adress in file
     if($error == false){
-        $file = fopen($fileName, );
+        $file = fopen($fileName, "a");
         fwrite($file, "$email,");
         fclose($file);
-        echo "success";
+        echo "ok";
     }
 }

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<!--
+ * A Design by GraphBerry
+ * Author: GraphBerry
+ * Author URL: http://graphberry.com
+ * License: http://graphberry.com/pages/license
+-->
+<html lang="en" wp-site wp-site-is-master-page="true" wp-site-theme-name="Theme Pluton" wp-site-theme-slug="pluton" wp-site-themes-folder="/opt/lampp/htdocs/wordpress/wp-content/themes/pluton" wp-site-preview-url="http://g400s/wordpress/">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluton Theme by BraphBerry.com</title>
+    <!-- Load Roboto font -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' wp-enqueue-style wp-enqueue-style-register="true">
+    <!-- Load css styles -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <link rel="stylesheet" type="text/css" href="css/pluton.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css" wp-enqueue-style wp-enqueue-style-register="true"/>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+  </head>
+  <body wp-body-class>
+    <div class="navbar" data-pg-collapsed>
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="#" class="brand" wp-href="url">
+            <img src="images/logo.png" width="120" height="40" alt="Logo" cms-editable="custom_logo" cms-editable-type="image" cms-editable-label="Logo" cms-editable-image-size="normal" cms-editable-section="title_tagline"/>
+            <!-- This is website logo -->
+          </a>
+          <!-- Navigation button, visible on small resolution -->
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <i class="icon-menu"></i>
+          </button>
+          <!-- Main navigation -->
+          <div class="nav-collapse collapse pull-right">
+            <ul class="nav" id="top-navigation" wp-nav-menu="primary" wp-nav-menu-depth="-1">
+              <li class="active">
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#service">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#clients">Clients</a>
+              </li>
+              <li>
+                <a href="#price">Price</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End main navigation -->
+        </div>
+      </div>
+    </div>
+    <main wp-site-content>
+      <div id="home">
+        <!-- Start cSlider -->
+        <div id="da-slider" class="da-slider" cms-editable="bkg_img" cms-editable-type="background-image" cms-editable-label="Bkg Image" cms-editable-image-size="normal" cms-editable-section="sct_slider">
+          <div class="triangle" data-pg-collapsed></div>
+          <!-- mask elemet use for masking background image -->
+          <div class="mask" cms-editable="bkg_color" cms-editable-type="background-color" cms-editable-label="Bkg Color" cms-editable-section="sct_slider" data-pg-collapsed></div>
+          <!-- All slides centred in container element -->
+          <div class="container">
+            <!-- Start first slide -->
+            <div class="da-slide" wp-cz-control="page_slider_01" wp-cz-control-label="01 Slider" wp-cz-control-section="sct_slider" wp-cz-control-type="dropdown-pages" wp-loop="page_slider_01_query" wp-loop-show-empty-text="false" wp-loop-posts-per-page="1" wp-loop-page="get_theme_mod('page_slider_01')" wp-if-get-theme-mod="page_slider_01" wp-cz-control-input-style="dropdown-menu">
+              <h2 class="fittext2" cms-post-title data-pg-collapsed>Welcome to pluton theme</h2>
+              <h4 data-pg-collapsed>Clean & responsive</h4>
+              <p cms-post-content data-pg-collapsed>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+              <a href="#" class="da-link button" data-pg-collapsed cms-editable="01_slider_url" cms-editable-type="link" cms-editable-label="01 Slider URL" cms-editable-section="sct_slider" cms-editable-2="01_btn_text" cms-editable-label-2="01 Button Text" cms-editable-type-2="content" cms-editable-section-2="sct_slider">Read more</a>
+              <div class="da-img" data-pg-collapsed>
+                <img src="images/Slider01.png" alt="image01" width="320" cms-post-image="normal" data-pg-collapsed>
+              </div>
+            </div>
+            <!-- End first slide -->
+            <!-- Start second slide -->
+            <div class="da-slide" cms-editable="page_slider_02" cms-editable-type="page" cms-editable-label="02 Slider" cms-editable-section="sct_slider" data-pg-collapsed>
+              <h2 cms-post-title data-pg-collapsed>Easy management</h2>
+              <h4 data-pg-collapsed>Easy to use</h4>
+              <p cms-post-content data-pg-collapsed>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <a href="#" class="da-link button" cms-editable-type="link" cms-editable-type-2="content" cms-editable="02_slider_url" cms-editable-label="02 Slider URL" cms-editable-section="sct_slider" cms-editable-2="02_btn_text" cms-editable-label-2="02 Button Text" cms-editable-section-2="sct_slider" data-pg-collapsed>Read more</a>
+              <div class="da-img" data-pg-collapsed>
+                <img src="images/Slider02.png" width="320" alt="image02" cms-post-image="normal" data-pg-collapsed>
+              </div>
+            </div>
+            <!-- End second slide -->
+            <!-- Start third slide -->
+            <div class="da-slide" cms-editable="page_slider_03" cms-editable-type="page" cms-editable-label="Slider 03" cms-editable-section="sct_slider" data-pg-collapsed>
+              <h2 data-pg-collapsed>Revolution</h2>
+              <h4 data-pg-collapsed>Customizable</h4>
+              <p data-pg-collapsed>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <a href="#" class="da-link button" cms-editable="03_slider_url" cms-editable-label="03 Slider URL" cms-editable-type="link" cms-editable-section="sct_slider" cms-editable-type-2="content" cms-editable-2="03_btn_text" cms-editable-label-2="03 Button Text" cms-editable-section-2="sct_slider" data-pg-collapsed>Read more</a>
+              <div class="da-img" data-pg-collapsed>
+                <img src="images/Slider03.png" width="320" alt="image03" cms-post-image="normal" data-pg-collapsed>
+              </div>
+            </div>
+            <!-- Start third slide -->
+            <!-- Start cSlide navigation arrows -->
+            <div class="da-arrows" data-pg-collapsed>
+              <span class="da-arrows-prev" data-pg-collapsed></span>
+              <span class="da-arrows-next" data-pg-collapsed></span>
+            </div>
+            <!-- End cSlide navigation arrows -->
+          </div>
+        </div>
+      </div>
+      <div class="primary-section section" id="service" data-pg-collapsed>
+        <div class="container" data-pg-collapsed>
+          <!-- Start title section -->
+          <div class="title" data-pg-collapsed>
+            <h1 cms-editable="sct_service_title" cms-editable-type="content" cms-editable-label="	Main Heading" cms-editable-section="sct_service" data-pg-collapsed>What We Do?</h1>
+            <!-- Section's title goes here -->
+            <p cms-editable="sct_service_sub" cms-editable-type="content" cms-editable-label="Sub Heading" cms-editable-section="sct_service" cms-editable-textarea data-pg-collapsed>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+            <!--Simple description for section goes here. -->
+          </div>
+          <div class="row-fluid" data-pg-collapsed>
+            <div class="span4" wp-post-class wp-the-id wp-loop="service" wp-loop-post-type-custom="service" wp-loop-orderby="rand" wp-loop-order="ASC" wp-loop-posts-per-page="3" wp-post-type="service" wp-post-type-name="Services" wp-post-type-name-singular="Service" wp-post-type-public="true" wp-post-type-supports="title,editor,author,thumbnail,excerpt,custom-fields,revisions,page-attributes" wp-post-type-show-in-menu="true" data-pg-collapsed>
+              <div class="centered service" data-pg-collapsed>
+                <div class="circle-border zoom-in" data-pg-collapsed>
+                  <img class="img-circle" src="images/Service1.png" alt="service 1" wp-the-post-thumbnail="normal" wp-the-post-thumbnail-if="true" data-pg-collapsed>
+                </div>
+                <h3 cms-post-title data-pg-collapsed>Modern Design</h3>
+                <p cms-post-content data-pg-collapsed>Para empresas que precisam fazer, no mínimo, 100 entregas rápidas diárias em endereços diferentes. Ideal para entrega de brindes, convites, faturas e comunicados em geral.</p>
+              </div>
+            </div>
+            <div class="span4" cms-no-export data-pg-collapsed>
+              <div class="centered service" data-pg-collapsed>
+                <div class="circle-border zoom-in" data-pg-collapsed>
+                  <img class="img-circle" src="images/Service2.png" alt="service 2" data-pg-collapsed/>
+                </div>
+                <h3 data-pg-collapsed>Powerfull Theme</h3>
+                <p data-pg-collapsed>We Create Modern And Powerful Theme With Lots Animation And Features</p>
+              </div>
+            </div>
+            <div class="span4" cms-no-export data-pg-collapsed>
+              <div class="centered service" data-pg-collapsed>
+                <div class="circle-border zoom-in" data-pg-collapsed>
+                  <img class="img-circle" src="images/Service3.png" alt="service 3" data-pg-collapsed>
+                </div>
+                <h3 data-pg-collapsed>Clean Code</h3>
+                <p data-pg-collapsed>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section secondary-section " id="portfolio" data-pg-collapsed>
+        <div class="triangle" data-pg-collapsed></div>
+        <div class="container">
+          <div class=" title" data-pg-collapsed>
+            <h1 cms-editable="sct_portfolio_title" cms-editable-type="content" cms-editable-label="Main Heading" cms-editable-section="sct_portfolio" data-pg-collapsed>Have You Seen our Works?</h1>
+            <p cms-editable="sct_portfolio_subtitle" cms-editable-type="content" cms-editable-label="Sub Heading" cms-editable-textarea cms-editable-section="sct_portfolio" data-pg-collapsed>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+          </div>
+          <!-- Start details for portfolio project 1 -->
+          <ul class="nav nav-pills" data-pg-collapsed>
+            <li class="filter" data-filter="all">
+              <a href="#noAction" data-pg-collapsed>All</a>
+            </li>
+            <li class="filter" data-filter="web">
+              <a href="#noAction" data-pg-collapsed>Web</a>
+            </li>
+            <li class="filter" data-filter="photo" cms-no-export data-pg-collapsed>
+              <a href="#noAction" data-pg-collapsed>Photo</a>
+            </li>
+            <li class="filter" data-filter="identity" cms-no-export data-pg-collapsed>
+              <a href="#noAction" data-pg-collapsed>Identity</a>
+            </li>
+          </ul>
+          <div id="single-project">
+            <div id="slidingDiv" class="toggleDiv row-fluid single-project" wp-post-class wp-the-id="slidingDiv" wp-loop="my_single_prjct" wp-loop-first-classes="first" wp-loop-category-name="portfolio" wp-call-function="'slidingDiv'.$my_single_prjct_item_number" wp-call-function-echo="true" wp-call-function-set="attr" wp-call-function-set-attr="id" wp-loop-post-type="post" wp-loop-post-status="publish" data-pg-collapsed>
+              <div class="span6">
+                <img src="images/Portfolio01.png" alt="project 1" data-pg-collapsed/>
+              </div>
+              <div class="span6">
+                <div class="project-description">
+                  <div class="project-title clearfix">
+                    <h3 data-pg-collapsed cms-post-title>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info">
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 1 -->
+            <!-- Start details for portfolio project 2 -->
+            <div id="slidingDiv1" class="toggleDiv row-fluid single-project" cms-no-export data-pg-collapsed>
+              <div class="span6">
+                <img src="images/Portfolio02.png" alt="project 2" data-pg-collapsed>
+              </div>
+              <div class="span6">
+                <div class="project-description">
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>Life is a song - sing it. Life is a game - play it. Life is a challenge - meet it. Life is a dream - realize it. Life is a sacrifice - offer it. Life is love - enjoy it.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 2 -->
+            <!-- Start details for portfolio project 3 -->
+            <div id="slidingDiv2" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio03.png" alt="project 3" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>How far you go in life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving and tolerant of the weak and strong. Because someday in your life you will have been all of these.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 3 -->
+            <!-- Start details for portfolio project 4 -->
+            <div id="slidingDiv3" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio04.png" alt="project 4" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Project for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 4 -->
+            <!-- Start details for portfolio project 5 -->
+            <div id="slidingDiv4" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio05.png" alt="project 5" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>We need to give each other the space to grow, to be ourselves, to exercise our diversity. We need to give each other space so that we may both give and receive such beautiful things as ideas, openness, dignity, joy, healing, and inclusion.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 5 -->
+            <!-- Start details for portfolio project 6 -->
+            <div id="slidingDiv5" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio06.png" alt="project 6" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 6 -->
+            <!-- Start details for portfolio project 7 -->
+            <div id="slidingDiv6" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio07.png" alt="project 7" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>Always continue the climb. It is possible for you to do whatever you choose, if you first get to know who you are and are willing to work with a power that is greater than ourselves to do it.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 7 -->
+            <!-- Start details for portfolio project 8 -->
+            <div id="slidingDiv7" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio08.png" alt="project 8" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>What if you gave someone a gift, and they neglected to thank you for it - would you be likely to give them another? Life is the same way. In order to attract more of the blessings that life has to offer, you must truly appreciate what you already have.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 8 -->
+            <!-- Start details for portfolio project 9 -->
+            <div id="slidingDiv8" class="toggleDiv row-fluid single-project" data-pg-collapsed cms-no-export>
+              <div class="span6" data-pg-collapsed>
+                <img src="images/Portfolio09.png" alt="project 9" data-pg-collapsed>
+              </div>
+              <div class="span6" data-pg-collapsed>
+                <div class="project-description" data-pg-collapsed>
+                  <div class="project-title clearfix" data-pg-collapsed>
+                    <h3 data-pg-collapsed>Webste for Some Client</h3>
+                    <span class="show_hide close" data-pg-collapsed> <i class="icon-cancel" data-pg-collapsed></i> </span>
+                  </div>
+                  <div class="project-info" data-pg-collapsed>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Client</span>Some Client Name
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Date</span>July 2013
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Skills</span>HTML5, CSS3, JavaScript
+                    </div>
+                    <div data-pg-collapsed>
+                      <span data-pg-collapsed>Link</span>http://examplecomp.com
+                    </div>
+                  </div>
+                  <p data-pg-collapsed>I learned that we can do anything, but we can't do everything... at least not at the same time. So think of your priorities not in terms of what activities you do, but when you do them. Timing is everything.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End details for portfolio project 9 -->
+            <ul id="portfolio-grid" class="thumbnails row">
+              <li class="span4 mix web" wp-post-class wp-the-id wp-loop="my_single_prjct" wp-loop-first-classes="first" wp-loop-posts-per-page="12" wp-loop-category-name="portfolio" wp-loop-post-type="post" wp-loop-post-status="publish">
+                <div class="thumbnail">
+                  <img src="images/Portfolio01.png" alt="project 1" data-pg-collapsed wp-the-post-thumbnail="array(640,400)" wp-the-post-thumbnail-if="true">
+                  <a href="#single-project" rel="#slidingDiv" class="more show_hide" wp-call-function="'#slidingDiv'.$my_single_prjct_item_number" wp-call-function-echo="true" wp-call-function-set="attr" wp-call-function-set-attr="rel"> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed cms-post-title>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix photo" cms-no-export data-pg-collapsed>
+                <div class="thumbnail">
+                  <img src="images/Portfolio02.png" alt="project 2" data-pg-collapsed>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv1"> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix identity" cms-no-export data-pg-collapsed>
+                <div class="thumbnail">
+                  <img src="images/Portfolio03.png" alt="project 3" data-pg-collapsed>
+                  <a href="#single-project" class="more show_hide" rel="#slidingDiv2" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix web" cms-no-export data-pg-collapsed>
+                <div class="thumbnail">
+                  <img src="images/Portfolio04.png" alt="project 4" data-pg-collapsed>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv3" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix photo" cms-no-export data-pg-collapsed>
+                <div class="thumbnail">
+                  <img src="images/Portfolio05.png" alt="project 5" data-pg-collapsed>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv4" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix identity" cms-no-export data-pg-collapsed>
+                <div class="thumbnail">
+                  <img src="images/Portfolio06.png" alt="project 6" data-pg-collapsed>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv5" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix web" cms-no-export data-pg-collapsed>
+                <div class="thumbnail">
+                  <img src="images/Portfolio07.png" alt="project 7" data-pg-collapsed/>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv6" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix photo" cms-no-export>
+                <div class="thumbnail">
+                  <img src="images/Portfolio08.png" alt="project 8" data-pg-collapsed>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv7" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+              <li class="span4 mix identity" cms-no-export data-pg-collapsed>
+                <div class="thumbnail" data-pg-collapsed>
+                  <img src="images/Portfolio09.png" alt="project 9" data-pg-collapsed>
+                  <a href="#single-project" class="show_hide more" rel="#slidingDiv8" data-pg-collapsed> <i class="icon-plus" data-pg-collapsed></i> </a>
+                  <h3 data-pg-collapsed>Thumbnail label</h3>
+                  <p data-pg-collapsed>Thumbnail caption...</p>
+                  <div class="mask" data-pg-collapsed></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section primary-section" id="about" data-pg-collapsed>
+        <div class="triangle" data-pg-collapsed></div>
+        <div class="container" data-pg-collapsed>
+          <div class="title" cms-editable="sct_team_p" cms-editable-type="page" cms-editable-label="Team" cms-editable-section="full_sections" data-pg-collapsed>
+            <h1 wp-cz-control="sct_team_main" wp-cz-control-label="Main Heading" wp-cz-control-section="sct_team" wp-cz-control-type="text" wp-cz-theme-mod="sct_team_main" wp-cz-control-priority="1" data-pg-collapsed>Who We Are?</h1>
+            <p wp-cz-control="sct_team_sub" wp-cz-control-label="Sub Heading" wp-cz-control-section="sct_team" wp-cz-control-type="textarea" wp-cz-theme-mod="sct_team_sub" wp-cz-control-priority="2" data-pg-collapsed>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+          </div>
+          <div class="row-fluid team" data-pg-collapsed>
+            <div class="span4" id="first-person" wp-post-class wp-the-id="first-person" wp-loop="my_team" wp-loop-orderby="rand" wp-loop-order="ASC" wp-loop-posts-per-page="3" wp-loop-post-type="post" wp-loop-post-status="publish" wp-loop-category-name="team,teams,member,members" data-pg-collapsed>
+              <div class="thumbnail" data-pg-collapsed>
+                <img src="images/Team1.png" alt="team 1" cms-post-image="normal" data-pg-collapsed>
+                <h3 wp-the-title data-pg-collapsed>John Doe</h3>
+                <ul class="social" data-pg-collapsed>
+                  <li cms-post-field="facebook_url" cms-post-field-type="content" cms-post-field-2="facebook_url" cms-post-field-type-2="link" cms-post-field-acf cms-post-field-if data-pg-collapsed> 
+                    <a href="" wp-call-function="the_field( 'facebook_url' );" wp-call-function-set="attr" wp-call-function-set-attr="href" data-pg-collapsed><span class="icon-facebook-circled" data-pg-collapsed></span></a>
+                  </li>
+                  <li data-pg-collapsed>
+                    <a href="" cms-post-field="twitter_url" cms-post-field-type="content" cms-post-field-type-2="link" cms-post-field-2="twitter_url" cms-post-field-if cms-post-field-acf data-pg-collapsed> <span class="icon-twitter-circled" data-pg-collapsed></span> </a>
+                  </li>
+                  <li data-pg-collapsed>
+                    <a href="" cms-post-field="linkedin_url" cms-post-field-type="content" cms-post-field-type-2="link" cms-post-field-2="linkedin_url" cms-post-field-if cms-post-field-acf data-pg-collapsed> <span class="icon-linkedin-circled" data-pg-collapsed></span> </a>
+                  </li>
+                </ul>
+                <div class="mask" data-pg-collapsed>
+                  <h2 wp-the-excerpt wp-the-excerpt-set="content" data-pg-collapsed>Copywriter</h2>
+                  <p wp-the-content wp-the-content-set="content" data-pg-collapsed>When you stop expecting people to be perfect, you can like them for who they are.</p>
+                </div>
+              </div>
+            </div>
+            <div class="span4" id="second-person" wp-no-export data-pg-collapsed>
+              <div class="thumbnail" data-pg-collapsed>
+                <img src="images/Team2.png" alt="team 1" data-pg-collapsed>
+                <h3 data-pg-collapsed>John Doe</h3>
+                <ul class="social" data-pg-collapsed>
+                  <li data-pg-collapsed>
+                    <a href="" data-pg-collapsed> <span class="icon-facebook-circled" data-pg-collapsed></span> </a>
+                  </li>
+                  <li data-pg-collapsed>
+                    <a href="" data-pg-collapsed> <span class="icon-twitter-circled" data-pg-collapsed></span> </a>
+                  </li>
+                  <li data-pg-collapsed>
+                    <a href="" data-pg-collapsed> <span class="icon-linkedin-circled" data-pg-collapsed></span> </a>
+                  </li>
+                </ul>
+                <div class="mask" data-pg-collapsed>
+                  <h2 data-pg-collapsed>Designer</h2>
+                  <p data-pg-collapsed>When you stop expecting people to be perfect, you can like them for who they are.</p>
+                </div>
+              </div>
+            </div>
+            <div class="span4" id="third-person" wp-no-export data-pg-collapsed>
+              <div class="thumbnail" data-pg-collapsed>
+                <img src="images/Team3.png" alt="team 1" data-pg-collapsed>
+                <h3 data-pg-collapsed>John Doe</h3>
+                <ul class="social" data-pg-collapsed>
+                  <li data-pg-collapsed>
+                    <a href="" data-pg-collapsed> <span class="icon-facebook-circled" data-pg-collapsed></span> </a>
+                  </li>
+                  <li data-pg-collapsed>
+                    <a href="" data-pg-collapsed> <span class="icon-twitter-circled" data-pg-collapsed></span> </a>
+                  </li>
+                  <li data-pg-collapsed>
+                    <a href="" data-pg-collapsed> <span class="icon-linkedin-circled" data-pg-collapsed></span> </a>
+                  </li>
+                </ul>
+                <div class="mask" data-pg-collapsed>
+                  <h2 data-pg-collapsed>Photographer</h2>
+                  <p data-pg-collapsed>When you stop expecting people to be perfect, you can like them for who they are.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text centered" data-pg-collapsed>
+            <h3 cms-editable="sct_about_main" cms-editable-type="content" cms-editable-section="sct_about" cms-editable-label="Main Heading" data-pg-collapsed>About Us</h3>
+            <p cms-editable="sct_about_sub" cms-editable-type="content" cms-editable-textarea cms-editable-label="Sub Heading" cms-editable-section="sct_about" data-pg-collapsed>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          </div>
+          <h3 data-pg-collapsed>Skills</h3>
+          <div class="row-fluid" data-pg-collapsed>
+            <div class="span6" data-pg-collapsed>
+              <ul class="skills" data-pg-collapsed>
+                <li wp-if-get-theme-mod="a_skill_bar" data-pg-collapsed>
+                  <span class="bar" data-width="100%" wp-cz-control="a_skill_bar" wp-cz-control-label="Bar" wp-cz-control-section="sct_skill" wp-cz-control-type="text" wp-cz-theme-mod="a_skill_bar" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-set-attr="data-width" data-pg-collapsed></span>
+                  <h3 cms-editable="a_skill_title" cms-editable-type="content" cms-editable-section="sct_skill" cms-editable-label="First Skill" data-pg-collapsed>Graphic Design</h3>
+                </li>
+                <li wp-if-get-theme-mod="b_skill_bar" data-pg-collapsed>
+                  <span class="bar" data-width="95%" wp-cz-control="b_skill_bar" wp-cz-control-label="Bar" wp-cz-control-section="sct_skill" wp-cz-control-type="text" wp-cz-theme-mod="b_skill_bar" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-set-attr="data-width" data-pg-collapsed></span>
+                  <h3 cms-editable="b_skill_title" cms-editable-type="content" cms-editable-label="Second Skill" cms-editable-section="sct_skill" data-pg-collapsed>Html & Css</h3>
+                </li>
+                <li wp-if-get-theme-mod="c_skill_bar" data-pg-collapsed>
+                  <span class="bar" data-width="68%" wp-cz-control="c_skill_bar" wp-cz-control-label="Bar" wp-cz-control-section="sct_skill" wp-cz-control-type="text" data-pg-collapsed></span>
+                  <h3 cms-editable="c_skill_title" cms-editable-type="content" cms-editable-label="Third Skill" cms-editable-section="sct_skill" data-pg-collapsed>jQuery</h3>
+                </li>
+                <li wp-if-get-theme-mod="d_skill_bar" data-pg-collapsed>
+                  <span class="bar" data-width="70%" wp-cz-control="d_skill_bar" wp-cz-control-label="Bar" wp-cz-control-section="sct_skill" wp-cz-control-type="text" wp-cz-theme-mod="d_skill_bar" wp-cz-theme-mod-set="attr" wp-cz-theme-mod-set-attr="data-width" data-pg-collapsed></span>
+                  <h3 cms-editable="d_skill_title" cms-editable-type="content" cms-editable-label="Four Skill" cms-editable-section="sct_skill" data-pg-collapsed>Wordpress</h3>
+                </li>
+              </ul>
+            </div>
+            <div class="span6" data-pg-collapsed>
+              <div class="highlighted-box center" cms-editable="sct_about_box_color" cms-editable-label="Box Color" cms-editable-type="background-color" cms-editable-section="sct_about">
+                <h1 data-pg-collapsed cms-editable-type="content" cms-editable="sct_about_box_main" cms-editable-label="Box Heading" cms-editable-section="sct_about">We're Hiring</h1>
+                <p data-pg-collapsed cms-editable="sct_about_box_content" cms-editable-type="content" cms-editable-label="Box Content" cms-editable-textarea cms-editable-section="sct_about">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can't do everything...</p>
+                <button class="button button-sp" data-pg-collapsed cms-editable="sct_about_btn" cms-editable-type="content" cms-editable-label="Box Button" cms-editable-section="sct_about" cms-editable-2="sct_about_btn_lnk" cms-editable-label-2="Button URL" cms-editable-type-2="link" cms-editable-section-2="sct_about">Join Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section secondary-section" data-pg-collapsed>
+        <div class="triangle" data-pg-collapsed></div>
+        <div class="container centered">
+          <p class="large-text" data-pg-collapsed cms-editable="sct_cta_main" cms-editable-type="content" cms-editable-label="Main Heading" cms-editable-section="sct_cta">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
+          <a href="#" class="button" data-pg-collapsed cms-editable="cta_btn" cms-editable-type="content" cms-editable-type-2="link" cms-editable-label="Button Text" cms-editable-section="sct_cta" cms-editable-2="cta_btn_lnk" cms-editable-label-2="Button URL" cms-editable-section-2="sct_cta">Purshase now</a>
+        </div>
+      </div>
+      <div id="clients" cms-editable="sct_testemonial_p" cms-editable-type="page" cms-editable-label="Testemonial" cms-editable-section="full_sections" data-pg-collapsed>
+        <div class="section primary-section" data-pg-collapsed>
+          <div class="triangle" data-pg-collapsed></div>
+          <div class="container" data-pg-collapsed>
+            <div class="title">
+              <h1 cms-post-title data-pg-collapsed>What Client Say?</h1>
+              <p wp-the-content wp-the-content-set="content" data-pg-collapsed>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+            </div>
+            <div class="row">
+              <div class="span4" cms-post cms-post-type="ours_testemonials" cms-post-type-register cms-post-type-name="ours Testemonials" cms-post-type-name-singular="Testemonial">
+                <div class="testimonial" data-pg-collapsed>
+                  <p data-pg-collapsed wp-the-content wp-the-content-set="content">Super recomendo. Ótimo trabalho. Entrega super rápido.</p>
+                  <div class="whopic">
+                    <div class="arrow" data-pg-collapsed></div>
+                    <img src="images/Client1.png" class="centered" alt="client 1" data-pg-collapsed cms-post-image="normal">
+                    <strong wp-the-title>John Doe <small data-pg-collapsed>Client</small> </strong>
+                  </div>
+                </div>
+              </div>
+              <div class="span4" cms-no-export>
+                <div class="testimonial" data-pg-collapsed>
+                  <p data-pg-collapsed>"In motivating people, you've got to engage their minds and their hearts. I motivate people, I hope, by example - and perhaps by excitement, by having productive ideas to make others feel involved."</p>
+                  <div class="whopic" data-pg-collapsed>
+                    <div class="arrow" data-pg-collapsed></div>
+                    <img src="images/Client2.png" class="centered" alt="client 2" data-pg-collapsed>
+                    <strong data-pg-collapsed>John Doe <small data-pg-collapsed>Client</small> </strong>
+                  </div>
+                </div>
+              </div>
+              <div class="span4" cms-no-export>
+                <div class="testimonial" data-pg-collapsed>
+                  <p data-pg-collapsed>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
+                  <div class="whopic" data-pg-collapsed>
+                    <div class="arrow" data-pg-collapsed></div>
+                    <img src="images/Client3.png" class="centered" alt="client 3" data-pg-collapsed>
+                    <strong data-pg-collapsed>John Doe <small data-pg-collapsed>Client</small> </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text" wp-the-excerpt wp-the-excerpt-set="content" data-pg-collapsed>
+                        "Perfection is Achieved Not When There Is Nothing More to Add, But When There Is Nothing Left to Take Away" </p>
+          </div>
+        </div>
+      </div>
+      <div class="section third-section" data-pg-collapsed>
+        <div class="container centered" data-pg-collapsed>
+          <div class="sub-section" data-pg-collapsed>
+            <div class="title clearfix" data-pg-collapsed>
+              <div class="pull-left" data-pg-collapsed>
+                <h3 data-pg-collapsed cms-editable="sct_client_main" cms-editable-type="content" cms-editable-label="Main Heading" cms-editable-section="sct_client">Our Clients</h3>
+              </div>
+              <ul class="client-nav pull-right" data-pg-collapsed>
+                <li id="client-prev" data-pg-collapsed></li>
+                <li id="client-next" data-pg-collapsed></li>
+              </ul>
+            </div>
+            <ul class="row client-slider" id="clint-slider">
+              <li data-pg-collapsed>
+                <img src="images/clients/ClientLogo01.png" alt="client logo 1" data-pg-collapsed>
+              </li>
+              <li data-pg-collapsed>
+                <a href="" data-pg-collapsed>
+                  <img src="images/clients/ClientLogo02.png" alt="client logo 2" data-pg-collapsed>
+                </a>
+              </li>
+              <li data-pg-collapsed>
+                <a href="" data-pg-collapsed>
+                  <img src="images/clients/ClientLogo03.png" alt="client logo 3" data-pg-collapsed>
+                </a>
+              </li>
+              <li data-pg-collapsed>
+                <a href="" data-pg-collapsed>
+                  <img src="images/clients/ClientLogo04.png" alt="client logo 4" data-pg-collapsed>
+                </a>
+              </li>
+              <li data-pg-collapsed>
+                <a href="" data-pg-collapsed>
+                  <img src="images/clients/ClientLogo05.png" alt="client logo 5" data-pg-collapsed>
+                </a>
+              </li>
+              <li data-pg-collapsed>
+                <a href="" data-pg-collapsed>
+                  <img src="images/clients/ClientLogo02.png" alt="client logo 6" data-pg-collapsed>
+                </a>
+              </li>
+              <li data-pg-collapsed>
+                <a href="" data-pg-collapsed>
+                  <img src="images/clients/ClientLogo04.png" alt="client logo 7" data-pg-collapsed>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="price" class="section secondary-section" data-pg-collapsed wp-cz-control="sct_price_show" wp-cz-control-label="Display Price Block" wp-cz-control-type="checkbox" wp-cz-control-section="sct_price" wp-if-get-theme-mod="sct_price_show">
+        <div class="container" data-pg-collapsed>
+          <div class="title" data-pg-collapsed>
+            <h1 data-pg-collapsed cms-editable="sct_price_main" cms-editable-type="content" cms-editable-label="Main Heading" cms-editable-section="sct_price">Price</h1>
+            <p data-pg-collapsed cms-editable="sct_price_subheading" cms-editable-type="content" cms-editable-label="Sub Heading" cms-editable-textarea cms-editable-section="sct_price">Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+          </div>
+          <div class="price-table row-fluid">
+            <div class="span4 price-column" data-pg-collapsed>
+              <h3 data-pg-collapsed>Basic</h3>
+              <ul class="list">
+                <li class="price" data-pg-collapsed>$19,99</li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>Free</strong> Setup
+                </li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>24/7</strong> Support
+                </li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>5 GB</strong> File Storage
+                </li>
+              </ul>
+              <a href="#" class="button button-ps">BUY</a>
+            </div>
+            <div class="span4 price-column" data-pg-collapsed>
+              <h3 data-pg-collapsed>Pro</h3>
+              <ul class="list" data-pg-collapsed>
+                <li class="price" data-pg-collapsed>$39,99</li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>Free</strong> Setup
+                </li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>24/7</strong> Support
+                </li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>25 GB</strong> File Storage
+                </li>
+              </ul>
+              <a href="#" class="button button-ps" data-pg-collapsed>BUY</a>
+            </div>
+            <div class="span4 price-column" data-pg-collapsed>
+              <h3 data-pg-collapsed>Premium</h3>
+              <ul class="list" data-pg-collapsed>
+                <li class="price" data-pg-collapsed>$79,99</li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>Free</strong> Setup
+                </li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>24/7</strong> Support
+                </li>
+                <li data-pg-collapsed>
+                  <strong data-pg-collapsed>50 GB</strong> File Storage
+                </li>
+              </ul>
+              <a href="#" class="button button-ps" data-pg-collapsed>BUY</a>
+            </div>
+          </div>
+          <div class="centered" data-pg-collapsed>
+            <p class="price-text" data-pg-collapsed>We Offer Custom Plans. Contact Us For More Info.</p>
+            <a href="#contact" class="button" data-pg-collapsed>Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="section third-section" data-pg-collapsed>
+        <div class="container newsletter" data-pg-collapsed>
+          <div class="sub-section" data-pg-collapsed>
+            <div class="title clearfix" data-pg-collapsed>
+              <div class="pull-left" data-pg-collapsed>
+                <h3 data-pg-collapsed>Newsletter</h3>
+              </div>
+            </div>
+          </div>
+          <div id="success-subscribe" class="alert alert-success invisible" data-pg-collapsed>
+            <strong data-pg-collapsed>Well done!</strong>You successfully subscribet to our newsletter.
+          </div>
+          <div class="row-fluid" data-pg-collapsed>
+            <div class="span5" data-pg-collapsed>
+              <p data-pg-collapsed>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+            <div class="span7" data-pg-collapsed>
+              <form class="inline-form" id="subscribe" data-pg-collapsed>
+                <input type="email" name="email" id="nlmail" class="span8" placeholder="Enter your email" required data-pg-collapsed/>
+                <button id="success-subscribe" class="button button-sp" type="submit" data-pg-collapsed>Subscribe</button>
+              </form>
+              <div id="err-subscribe" class="error centered" data-pg-collapsed>Please provide valid email address.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="contact" data-pg-collapsed>
+        <div class="section secondary-section" data-pg-collapsed>
+          <div class="container" data-pg-collapsed>
+            <div class="title" data-pg-collapsed>
+              <h1 data-pg-collapsed>Contact Us</h1>
+              <p data-pg-collapsed>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+            </div>
+          </div>
+          <div class="map-wrapper" data-pg-collapsed>
+            <div class="map-canvas" id="map_canvas" data-pg-collapsed>Loading map...</div>
+            <div class="container" data-pg-collapsed>
+              <div class="row-fluid" data-pg-collapsed>
+                <div class="span5 contact-form centered" data-pg-collapsed>
+                  <h3 data-pg-collapsed>Say Hello</h3>
+                  <div id="successSend" class="alert alert-success invisible" data-pg-collapsed>
+                    <strong data-pg-collapsed>Well done!</strong>Your message has been sent.
+                  </div>
+                  <div id="errorSend" class="alert alert-error invisible" data-pg-collapsed>There was an error.</div>
+                  <form id="contact-form" action="php/mail.php" data-pg-collapsed>
+                    <div class="control-group" data-pg-collapsed>
+                      <div class="controls" data-pg-collapsed>
+                        <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." data-pg-collapsed/>
+                        <div class="error left-align" id="err-name" data-pg-collapsed>Please enter name.</div>
+                      </div>
+                    </div>
+                    <div class="control-group" data-pg-collapsed>
+                      <div class="controls" data-pg-collapsed>
+                        <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." data-pg-collapsed/>
+                        <div class="error left-align" id="err-email" data-pg-collapsed>Please enter valid email adress.</div>
+                      </div>
+                    </div>
+                    <div class="control-group" data-pg-collapsed>
+                      <div class="controls" data-pg-collapsed>
+                        <textarea class="span12" name="comment" id="comment" placeholder="* Comments..." data-pg-collapsed></textarea>
+                        <div class="error left-align" id="err-comment" data-pg-collapsed>Please enter your comment.</div>
+                      </div>
+                    </div>
+                    <div class="control-group" data-pg-collapsed>
+                      <div class="controls" data-pg-collapsed>
+                        <button id="send-mail" class="message-btn" data-pg-collapsed>Send message</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container" data-pg-collapsed>
+            <div class="span9 center contact-info" data-pg-collapsed>
+              <p wp-acf-get-field="about_address" data-pg-collapsed>123 Fifth Avenue, 12th,Belgrade,SRB 11000</p>
+              <p class="info-mail" wp-acf-get-field-2="e-mail" data-pg-collapsed>ourstudio@somemail.com</p>
+              <p data-pg-collapsed>+11 234 567 890</p>
+              <p data-pg-collapsed>+11 286 543 850</p>
+              <div class="title" data-pg-collapsed>
+                <h3 data-pg-collapsed>We Are Social</h3>
+              </div>
+            </div>
+            <div class="row-fluid centered" data-pg-collapsed>
+              <ul class="social" data-pg-collapsed>
+                <li data-pg-collapsed>
+                  <a href="" data-pg-collapsed> <span class="icon-facebook-circled" data-pg-collapsed></span></a>
+                </li>
+                <li data-pg-collapsed>
+                  <a href="" data-pg-collapsed> <span class="icon-twitter-circled" data-pg-collapsed></span> </a>
+                </li>
+                <li data-pg-collapsed>
+                  <a href="" data-pg-collapsed> <span class="icon-linkedin-circled" data-pg-collapsed></span> </a>
+                </li>
+                <li data-pg-collapsed>
+                  <a href="" data-pg-collapsed> <span class="icon-pinterest-circled" data-pg-collapsed></span> </a>
+                </li>
+                <li data-pg-collapsed>
+                  <a href="" data-pg-collapsed> <span class="icon-dribbble-circled" data-pg-collapsed></span> </a>
+                </li>
+                <li data-pg-collapsed>
+                  <a href="" data-pg-collapsed> <span class="icon-gplus-circled" data-pg-collapsed></span> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Start home section -->
+    <!-- End home section -->
+    <!-- Service section start -->
+    <!-- Service section end -->
+    <!-- Portfolio section start -->
+    <!-- Portfolio section end -->
+    <!-- About us section start -->
+    <!-- About us section end -->
+    <!-- Client section start -->
+    <!-- Client section start -->
+    <!-- Price section start -->
+    <!-- Price section end -->
+    <!-- Newsletter section start -->
+    <!-- Newsletter section end -->
+    <!-- Contact section start -->
+    <!-- Contact section edn -->
+    <!-- Footer section start -->
+    <div class="footer" style="background-color: #2e2b2b;">
+      <p> @ 2013 Theme by <a href="http://www.graphberry.com">GraphBerry</a>, <a href="http://goo.gl/NM84K2">Documentation</a></p>
+    </div>
+    <!-- Footer section end -->
+    <!-- ScrollUp button start -->
+    <div class="scrollup">
+      <a href="#"> <i class="icon-up-open"></i> </a>
+    </div>
+    <!-- ScrollUp button end -->
+    <!-- Include javascript -->
+    <script src="js/jquery.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/bootstrap.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/jquery.cslider.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <script type="text/javascript" src="js/jquery.inview.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+    <!-- Load google maps api and call initializeMap function defined in app.js -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=false&callback=initializeMap" type="text/javascript" wp-enqueue-script wp-enqueue-script-register="true" wp-enqueue-script-in-footer="true"></script>
+    <!-- css3-mediaqueries.js for IE8 or older -->
+    <!--[if lt IE 9]>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+    <script type="text/javascript" src="js/app.js" wp-enqueue-script wp-enqueue-script-in-footer="true" wp-enqueue-script-register="true"></script>
+  </body>
+</html>
