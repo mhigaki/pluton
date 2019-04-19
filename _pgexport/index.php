@@ -13,8 +13,8 @@ get_header(); ?>
             <?php if ( get_theme_mod( 'page_slider_01' ) ) : ?>
                 <?php
                     $page_slider_01_query_args = array(
-                      'page_id' => get_theme_mod('page_slider_01'),
-                      'posts_per_page' => '1'
+                    	'page_id' => get_theme_mod('page_slider_01'),
+                    	'posts_per_page' => '1'
                     )
                 ?>
                 <?php $page_slider_01_query = new WP_Query( $page_slider_01_query_args ); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
                             <h2 class="fittext2"><?php the_title(); ?></h2>
                             <h4><?php _e( 'Clean & responsive', 'pluton' ); ?></h4>
                             <?php the_content(); ?>
-                            <a href="<?php echo get_theme_mod( '01_slider_url', '#' ); ?>" class="da-link button"><?php echo get_theme_mod( '01_btn_text', __( 'Read more', 'pluton' ) ); ?></a>
+                            <a href="<?php echo get_theme_mod( '01_slider_url', '#' ); ?>" class="da-link button"><?php echo get_theme_mod( '01_btn_text', __( 'Service', 'pluton' ) ); ?></a>
                             <div class="da-img">
                                 <?php
                                     if ( has_post_thumbnail() ) {
@@ -42,8 +42,8 @@ get_header(); ?>
             <?php if ( get_theme_mod( 'page_slider_02' ) ) : ?>
                 <?php
                     $page_slider_02_query_args = array(
-                      'page_id' => get_theme_mod('page_slider_02'),
-                      'posts_per_page' => '1'
+                    	'page_id' => get_theme_mod('page_slider_02'),
+                    	'posts_per_page' => '1'
                     )
                 ?>
                 <?php $page_slider_02_query = new WP_Query( $page_slider_02_query_args ); ?>
@@ -71,8 +71,8 @@ get_header(); ?>
             <?php if ( get_theme_mod( 'page_slider_03' ) ) : ?>
                 <?php
                     $page_slider_03_query_args = array(
-                      'page_id' => get_theme_mod('page_slider_03'),
-                      'posts_per_page' => '1'
+                    	'page_id' => get_theme_mod('page_slider_03'),
+                    	'posts_per_page' => '1'
                     )
                 ?>
                 <?php $page_slider_03_query = new WP_Query( $page_slider_03_query_args ); ?>
@@ -116,23 +116,25 @@ get_header(); ?>
         </div>
         <div class="row-fluid">
             <?php
-                $service_args = array(
-                  'post_type' => 'service',
-                  'posts_per_page' => '3',
-                  'order' => 'ASC',
-                  'orderby' => 'rand'
+                $ours_services_args = array(
+                	'category_name' => 'services',
+                	'post_type' => 'post',
+                	'post_status' => 'publish',
+                	'posts_per_page' => '3',
+                	'order' => 'ASC',
+                	'orderby' => 'rand'
                 )
             ?>
-            <?php $service = new WP_Query( $service_args ); ?>
-            <?php if ( $service->have_posts() ) : ?>
-                <?php while ( $service->have_posts() ) : $service->the_post(); ?>
+            <?php $ours_services = new WP_Query( $ours_services_args ); ?>
+            <?php if ( $ours_services->have_posts() ) : ?>
+                <?php while ( $ours_services->have_posts() ) : $ours_services->the_post(); ?>
                     <div <?php post_class( 'span4' ); ?> id="post-<?php the_ID(); ?>">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
                                 <?php
                                     if ( has_post_thumbnail() ) {
                                         the_post_thumbnail( 'normal', array(
-                                      'class' => 'img-circle'
+                                    	'class' => 'img-circle wp-post-image'
                                     ) );
                                     }
                                  ?>
@@ -157,20 +159,12 @@ get_header(); ?>
             <p><?php echo get_theme_mod( 'sct_portfolio_subtitle', __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ) ); ?></p>
         </div>
         <!-- Start details for portfolio project 1 -->
-        <ul class="nav nav-pills">
-            <li class="filter" data-filter="all">
-                <a href="#noAction"><?php _e( 'All', 'pluton' ); ?></a>
-            </li>
-            <li class="filter" data-filter="web">
-                <a href="#noAction"><?php _e( 'Web', 'pluton' ); ?></a>
-            </li>
-        </ul>
         <div id="single-project">
             <?php
                 $my_single_prjct_args = array(
-                  'category_name' => 'portfolio',
-                  'post_type' => 'post',
-                  'post_status' => 'publish'
+                	'category_name' => 'portfolio',
+                	'post_type' => 'post',
+                	'post_status' => 'publish'
                 )
             ?>
             <?php $my_single_prjct = new WP_Query( $my_single_prjct_args ); ?>
@@ -179,7 +173,7 @@ get_header(); ?>
                 <?php while ( $my_single_prjct->have_posts() ) : $my_single_prjct->the_post(); ?>
                     <div id="<?php echo 'slidingDiv'.$my_single_prjct_item_number ?>" class="toggleDiv row-fluid single-project<?php if( $my_single_prjct_item_number == 0) echo ' first'; ?> <?php echo join( ' ', get_post_class( '' ) ) ?>">
                         <div class="span6">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/Portfolio01.png" alt="project 1"/>
+                            <img src="<?php $image['url']; ?>"/>
                         </div>
                         <div class="span6">
                             <div class="project-description">
@@ -188,22 +182,7 @@ get_header(); ?>
                                     <span class="show_hide close"> <i class="icon-cancel"></i> </span>
                                 </div>
                                 <div class="project-info">
-                                    <div>
-                                        <span><?php _e( 'Client', 'pluton' ); ?></span>
-                                        <?php _e( 'Some Client Name', 'pluton' ); ?>
-                                    </div>
-                                    <div>
-                                        <span><?php _e( 'Date', 'pluton' ); ?></span>
-                                        <?php _e( 'July 2013', 'pluton' ); ?>
-                                    </div>
-                                    <div>
-                                        <span><?php _e( 'Skills', 'pluton' ); ?></span>
-                                        <?php _e( 'HTML5, CSS3, JavaScript', 'pluton' ); ?>
-                                    </div>
-                                    <div>
-                                        <span><?php _e( 'Link', 'pluton' ); ?></span>
-                                        <?php _e( 'http://examplecomp.com', 'pluton' ); ?>
-                                    </div>
+                                    <?php the_content(); ?>
                                 </div>
                                 <p><?php _e( 'Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.', 'pluton' ); ?></p>
                             </div>
@@ -235,10 +214,10 @@ get_header(); ?>
             <ul id="portfolio-grid" class="thumbnails row">
                 <?php
                     $my_single_prjct_args = array(
-                      'category_name' => 'portfolio',
-                      'post_type' => 'post',
-                      'post_status' => 'publish',
-                      'posts_per_page' => '12'
+                    	'category_name' => 'portfolio',
+                    	'post_type' => 'post',
+                    	'post_status' => 'publish',
+                    	'posts_per_page' => '12'
                     )
                 ?>
                 <?php $my_single_prjct = new WP_Query( $my_single_prjct_args ); ?>
@@ -246,16 +225,15 @@ get_header(); ?>
                     <?php $my_single_prjct_item_number = 0; ?>
                     <?php while ( $my_single_prjct->have_posts() ) : $my_single_prjct->the_post(); ?>
                         <li class="span4 mix web<?php if( $my_single_prjct_item_number == 0) echo ' first'; ?> <?php echo join( ' ', get_post_class( '' ) ) ?>" id="post-<?php the_ID(); ?>">
-                            <div class="thumbnail">
-                                <?php
-                                    if ( has_post_thumbnail() ) {
-                                        the_post_thumbnail( array(640,400) );
-                                    }
-                                 ?>
-                                <a href="#single-project" rel="<?php echo '#slidingDiv'.$my_single_prjct_item_number ?>" class="more show_hide"> <i class="icon-plus"></i> </a>
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php _e( 'Thumbnail caption...', 'pluton' ); ?></p>
-                                <div class="mask"></div>
+                        <div class="thumbnail">
+                                <?php $image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id( '0' ), 'normal' );
+if( $image_attributes ) : ?>
+                                <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>"/>
+                            <?php endif; ?>
+                            <a href="#single-project" rel="<?php echo '#slidingDiv'.$my_single_prjct_item_number ?>" class="more show_hide"> <i class="icon-plus"></i> </a>
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php _e( 'macaco_alt', 'pluton' ); ?></p>
+                            <div class="mask"></div>
                             </div>
                         </li>
                         <?php $my_single_prjct_item_number++; ?>
@@ -274,8 +252,8 @@ get_header(); ?>
         <?php if ( get_theme_mod( 'sct_team_p' ) ) : ?>
             <?php
                 $sct_team_p_query_args = array(
-                  'page_id' => get_theme_mod('sct_team_p'),
-                  'posts_per_page' => '1'
+                	'page_id' => get_theme_mod('sct_team_p'),
+                	'posts_per_page' => '1'
                 )
             ?>
             <?php $sct_team_p_query = new WP_Query( $sct_team_p_query_args ); ?>
@@ -292,12 +270,12 @@ get_header(); ?>
         <div class="row-fluid team">
             <?php
                 $my_team_args = array(
-                  'category_name' => 'team,teams,member,members',
-                  'post_type' => 'post',
-                  'post_status' => 'publish',
-                  'posts_per_page' => '3',
-                  'order' => 'ASC',
-                  'orderby' => 'rand'
+                	'category_name' => 'team,teams,member,members',
+                	'post_type' => 'post',
+                	'post_status' => 'publish',
+                	'posts_per_page' => '3',
+                	'order' => 'ASC',
+                	'orderby' => 'rand'
                 )
             ?>
             <?php $my_team = new WP_Query( $my_team_args ); ?>
@@ -307,14 +285,16 @@ get_header(); ?>
                         <div class="thumbnail">
                             <?php
                                 if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail( 'normal' );
+                                    the_post_thumbnail( 'normal', array(
+                                	'class' => 'attachment-normal size-normal wp-post-image'
+                                ) );
                                 }
                              ?>
                             <h3><?php the_title(); ?></h3>
                             <ul class="social">
                                 <?php if ( get_field( 'facebook_url' ) ) : ?>
                                     <li href="<?php echo get_field( 'facebook_url' ); ?>">
-                                        <a href="<?php the_field( 'facebook_url' ); ?>"><span class="icon-facebook-circled"></span></a>
+                                        <a href="https://www.facebook.com/milton.higaki"><span class="icon-facebook-circled"></span></a>
                                     </li>
                                 <?php endif; ?>
                                 <li>
@@ -396,8 +376,8 @@ get_header(); ?>
 <?php if ( get_theme_mod( 'sct_testemonial_p' ) ) : ?>
     <?php
         $sct_testemonial_p_query_args = array(
-          'page_id' => get_theme_mod('sct_testemonial_p'),
-          'posts_per_page' => '1'
+        	'page_id' => get_theme_mod('sct_testemonial_p'),
+        	'posts_per_page' => '1'
         )
     ?>
     <?php $sct_testemonial_p_query = new WP_Query( $sct_testemonial_p_query_args ); ?>
@@ -414,10 +394,10 @@ get_header(); ?>
                         <div class="row">
                             <?php
                                 $ours_teteste_args = array(
-                                  'post_type' => 'ours_testemonials',
-                                  'nopaging' => true,
-                                  'order' => 'ASC',
-                                  'orderby' => 'rand'
+                                	'post_type' => 'ours_testemonials',
+                                	'nopaging' => true,
+                                	'order' => 'ASC',
+                                	'orderby' => 'rand'
                                 )
                             ?>
                             <?php $ours_teteste = new WP_Query( $ours_teteste_args ); ?>
@@ -426,13 +406,13 @@ get_header(); ?>
                                 <?php while ( $ours_teteste->have_posts() && $ours_teteste_item_number++ < 3 ) : $ours_teteste->the_post(); ?>
                                     <div class="span4<?php if( $ours_teteste_item_number == 0) echo ' first'; ?> <?php echo join( ' ', get_post_class( '' ) ) ?>" id="post-<?php the_ID(); ?>">
                                         <div class="testimonial">
-                                            <p><?php the_content(); ?></p>
+                                            <?php the_content(); ?>
                                             <div class="whopic">
                                                 <div class="arrow"></div>
                                                 <?php
                                                     if ( has_post_thumbnail() ) {
                                                         the_post_thumbnail( 'normal', array(
-                                                      'class' => 'centered wp-post-image'
+                                                    	'class' => 'centered wp-post-image'
                                                     ) );
                                                     }
                                                  ?>
@@ -469,12 +449,12 @@ get_header(); ?>
             <ul class="row client-slider" id="clint-slider">
                 <?php
                     $ours_clients_args = array(
-                      'category_name' => 'clients',
-                      'post_type' => 'post',
-                      'post_status' => 'publish',
-                      'nopaging' => true,
-                      'order' => 'ASC',
-                      'orderby' => 'date'
+                    	'category_name' => 'clients',
+                    	'post_type' => 'post',
+                    	'post_status' => 'publish',
+                    	'nopaging' => true,
+                    	'order' => 'ASC',
+                    	'orderby' => 'date'
                     )
                 ?>
                 <?php $ours_clients = new WP_Query( $ours_clients_args ); ?>
@@ -483,7 +463,9 @@ get_header(); ?>
                         <li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                             <?php
                                 if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail( 'normal' );
+                                    the_post_thumbnail( 'normal', array(
+                                	'class' => 'attachment-normal size-normal wp-post-image'
+                                ) );
                                 }
                              ?>
                         </li>
@@ -668,34 +650,31 @@ get_header(); ?>
         </div>
         <div class="container">
             <div class="span9 center contact-info">
-                <p><?php echo get_field( 'about_address' ); ?></p>
-                <p class="info-mail"><?php echo get_field( 'e-mail' ); ?></p>
-                <p><?php _e( '+11 234 567 890', 'pluton' ); ?></p>
-                <p><?php _e( '+11 286 543 850', 'pluton' ); ?></p>
+                <p><?php echo get_theme_mod( 'footer_adress', __( '123 Fifth Avenue, 12th,Belgrade,SRB 11000', 'pluton' ) ); ?></p>
+                <p class="info-mail"><?php echo get_theme_mod( 'footer_email', __( 'ourstudio@somemail.com', 'pluton' ) ); ?></p>
+                <p><?php echo get_theme_mod( 'footer_cel', __( '+11 234 567 890', 'pluton' ) ); ?></p>
+                <p><?php echo get_theme_mod( 'footer_tel', __( '+11 286 543 850', 'pluton' ) ); ?></p>
                 <div class="title">
-                    <h3><?php _e( 'We Are Social', 'pluton' ); ?></h3>
+                    <h3><?php echo get_theme_mod( 'footer_m_sociais', __( 'We Are Social', 'pluton' ) ); ?></h3>
                 </div>
             </div>
             <div class="row-fluid centered">
                 <ul class="social">
-                    <li>
-                        <a href=""> <span class="icon-facebook-circled"></span></a>
-                    </li>
-                    <li>
-                        <a href=""> <span class="icon-twitter-circled"></span> </a>
-                    </li>
-                    <li>
-                        <a href=""> <span class="icon-linkedin-circled"></span> </a>
-                    </li>
-                    <li>
-                        <a href=""> <span class="icon-pinterest-circled"></span> </a>
-                    </li>
-                    <li>
-                        <a href=""> <span class="icon-dribbble-circled"></span> </a>
-                    </li>
-                    <li>
-                        <a href=""> <span class="icon-gplus-circled"></span> </a>
-                    </li>
+                    <?php if ( get_theme_mod( 'footer_fcb_url' ) ) : ?>
+                        <li>
+                            <a href="<?php echo esc_url( get_theme_mod( 'footer_fcb_url' ) ); ?>"> <span class="icon-facebook-circled"></span></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if ( get_theme_mod( 'footer_twitter_url' ) ) : ?>
+                        <li>
+                            <a href="<?php echo esc_url( get_theme_mod( 'footer_twitter_url' ) ); ?>"> <span class="icon-twitter-circled"></span> </a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if ( get_theme_mod( 'footer_linkedin_url' ) ) : ?>
+                        <li>
+                            <a href="<?php echo esc_url( get_theme_mod( 'footer_linkedin_url' ) ); ?>"> <span class="icon-linkedin-circled"></span> </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

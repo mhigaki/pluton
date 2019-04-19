@@ -1,4 +1,5 @@
 <?php
+
 if ( ! function_exists( 'pluton_setup' ) ) :
 
 function pluton_setup() {
@@ -66,26 +67,26 @@ function pluton_init() {
     /* Pinegrow generated Custom Post Types Begin */
 
     register_post_type('service', array(
-    'labels' => 
-      array(
-        'name' => __( 'Services', 'pluton' ),
-        'singular_name' => __( 'Service', 'pluton' )
-      ),
-    'public' => true,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
-    'show_in_menu' => true
-  ));
+		'labels' => 
+			array(
+				'name' => __( 'Services', 'pluton' ),
+				'singular_name' => __( 'Service', 'pluton' )
+			),
+		'public' => true,
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
+		'show_in_menu' => true
+	));
 
     register_post_type('ours_testemonials', array(
-    'labels' => 
-      array(
-        'name' => __( 'ours Testemonials', 'pluton' ),
-        'singular_name' => __( 'Testemonial', 'pluton' )
-      ),
-    'public' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail' ),
-    'show_in_menu' => true
-  ));
+		'labels' => 
+			array(
+				'name' => __( 'ours Testemonials', 'pluton' ),
+				'singular_name' => __( 'Testemonial', 'pluton' )
+			),
+		'public' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail' ),
+		'show_in_menu' => true
+	));
 
     /* Pinegrow generated Custom Post Types End */
 
@@ -125,549 +126,652 @@ function pluton_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    $wp_customize->add_section( 'sct_testemonial', array(
-    'title' => __( 'Testemonial Section', 'pluton' ),
-    'panel' => 'pnl01_pluton',
-    'priority' => '5'
-  ));
-
-    $wp_customize->add_section( 'sct_client', array(
-    'title' => __( 'Client Section', 'pluton' ),
-    'panel' => 'pnl01_pluton'
-  ));
-
-    $wp_customize->add_section( 'sct_price', array(
-    'title' => __( 'Price Section', 'pluton' ),
-    'panel' => 'pnl01_pluton'
-  ));
-
-    $wp_customize->add_section( 'sct_cta', array(
-    'title' => __( 'CTA Section', 'pluton' ),
-    'panel' => 'pnl01_pluton'
-  ));
-
-    $wp_customize->add_section( 'sct_skill', array(
-    'title' => __( 'Skill Section', 'pluton' ),
-    'panel' => 'pnl01_pluton',
-    'priority' => '6'
-  ));
-
-    $wp_customize->add_section( 'sct_about', array(
-    'title' => __( 'About Section', 'pluton' ),
-    'panel' => 'pnl01_pluton',
-    'priority' => '4'
-  ));
-
-    $wp_customize->add_section( 'sct_portfolio', array(
-    'title' => __( 'Portfolio Section', 'pluton' ),
-    'panel' => 'pnl01_pluton',
-    'priority' => '3'
-  ));
+    $wp_customize->add_section( 'sct_slider', array(
+		'title' => __( 'Slider Section', 'pluton' ),
+		'panel' => 'pnl01_pluton',
+		'priority' => '1'
+	));
 
     $wp_customize->add_section( 'sct_service', array(
-    'title' => __( 'Service Section', 'pluton' ),
-    'panel' => 'pnl01_pluton',
-    'priority' => '2'
-  ));
+		'title' => __( 'Service Section', 'pluton' ),
+		'panel' => 'pnl01_pluton',
+		'priority' => '2'
+	));
 
-    $wp_customize->add_section( 'sct_slider', array(
-    'title' => __( 'Slider Section', 'pluton' ),
-    'panel' => 'pnl01_pluton',
-    'priority' => '1'
-  ));
+    $wp_customize->add_section( 'sct_portfolio', array(
+		'title' => __( 'Portfolio Section', 'pluton' ),
+		'panel' => 'pnl01_pluton',
+		'priority' => '3'
+	));
+
+    $wp_customize->add_section( 'sct_about', array(
+		'title' => __( 'About Section', 'pluton' ),
+		'panel' => 'pnl01_pluton',
+		'priority' => '4'
+	));
+
+    $wp_customize->add_section( 'sct_skill', array(
+		'title' => __( 'Skill Section', 'pluton' ),
+		'panel' => 'pnl01_pluton',
+		'priority' => '6'
+	));
+
+    $wp_customize->add_section( 'sct_cta', array(
+		'title' => __( 'CTA Section', 'pluton' ),
+		'panel' => 'pnl01_pluton'
+	));
+
+    $wp_customize->add_section( 'sct_price', array(
+		'title' => __( 'Price Section', 'pluton' ),
+		'panel' => 'pnl01_pluton'
+	));
+
+    $wp_customize->add_section( 'sct_client', array(
+		'title' => __( 'Client Section', 'pluton' ),
+		'panel' => 'pnl01_pluton'
+	));
+
+    $wp_customize->add_section( 'sct_testemonial', array(
+		'title' => __( 'Testemonial Section', 'pluton' ),
+		'panel' => 'pnl01_pluton',
+		'priority' => '5'
+	));
+
+    $wp_customize->add_section( 'sct_footer', array(
+		'title' => __( 'Footer Section', 'pluton' ),
+		'panel' => 'pnl02_pluton'
+	));
+
+    $wp_customize->add_section( 'sct_copyright', array(
+		'title' => __( 'Copyright Section', 'pluton' ),
+		'panel' => 'pnl02_pluton'
+	));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
     $wp_customize->add_setting( 'custom_logo', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'custom_logo', array(
-    'label' => __( 'Logo', 'pluton' ),
-    'type' => 'media',
-    'mime_type' => 'image',
-    'section' => 'title_tagline'
-  ) ) );
+		'label' => __( 'Logo', 'pluton' ),
+		'type' => 'media',
+		'mime_type' => 'image',
+		'section' => 'title_tagline'
+	) ) );
 
     $wp_customize->add_setting( 'bkg_img', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'bkg_img', array(
-    'label' => __( 'Bkg Image', 'pluton' ),
-    'type' => 'media',
-    'mime_type' => 'image',
-    'section' => 'sct_slider'
-  ) ) );
+		'label' => __( 'Bkg Image', 'pluton' ),
+		'type' => 'media',
+		'mime_type' => 'image',
+		'section' => 'sct_slider'
+	) ) );
 
     $wp_customize->add_setting( 'bkg_color', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bkg_color', array(
-    'label' => __( 'Bkg Color', 'pluton' ),
-    'type' => 'color',
-    'section' => 'sct_slider'
-  ) ) );
+		'label' => __( 'Bkg Color', 'pluton' ),
+		'type' => 'color',
+		'section' => 'sct_slider'
+	) ) );
 
     $wp_customize->add_setting( 'page_slider_01', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'page_slider_01', array(
-    'label' => __( '01 Slider', 'pluton' ),
-    'type' => 'dropdown-pages',
-    'section' => 'sct_slider',
-    'input_attrs' => 
-      array(
-        'style' => 'dropdown-menu'
-      )
-  ));
+		'label' => __( '01 Slider', 'pluton' ),
+		'type' => 'dropdown-pages',
+		'section' => 'sct_slider',
+		'input_attrs' => 
+			array(
+				'style' => 'dropdown-menu'
+			)
+	));
 
     $wp_customize->add_setting( '01_slider_url', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( '01_slider_url', array(
-    'label' => __( '01 Slider URL', 'pluton' ),
-    'type' => 'url',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '01 Slider URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( '01_btn_text', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( '01_btn_text', array(
-    'label' => __( '01 Button Text', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '01 Button Text', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( 'page_slider_02', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'page_slider_02', array(
-    'label' => __( '02 Slider', 'pluton' ),
-    'type' => 'dropdown-pages',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '02 Slider', 'pluton' ),
+		'type' => 'dropdown-pages',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( '02_slider_url', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( '02_slider_url', array(
-    'label' => __( '02 Slider URL', 'pluton' ),
-    'type' => 'url',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '02 Slider URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( '02_btn_text', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( '02_btn_text', array(
-    'label' => __( '02 Button Text', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '02 Button Text', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( 'page_slider_03', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'page_slider_03', array(
-    'label' => __( 'Slider 03', 'pluton' ),
-    'type' => 'dropdown-pages',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( 'Slider 03', 'pluton' ),
+		'type' => 'dropdown-pages',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( '03_slider_url', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( '03_slider_url', array(
-    'label' => __( '03 Slider URL', 'pluton' ),
-    'type' => 'url',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '03 Slider URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( '03_btn_text', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( '03_btn_text', array(
-    'label' => __( '03 Button Text', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_slider'
-  ));
+		'label' => __( '03 Button Text', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_slider'
+	));
 
     $wp_customize->add_setting( 'sct_service_title', array(
-    'type' => 'theme_mod',
-    'default' => __( 'What We Do?', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'What We Do?', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_service_title', array(
-    'label' => __( '	Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_service'
-  ));
+		'label' => __( '	Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_service'
+	));
 
     $wp_customize->add_setting( 'sct_service_sub', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_service_sub', array(
-    'label' => __( 'Sub Heading', 'pluton' ),
-    'type' => 'textarea',
-    'section' => 'sct_service'
-  ));
+		'label' => __( 'Sub Heading', 'pluton' ),
+		'type' => 'textarea',
+		'section' => 'sct_service'
+	));
 
     $wp_customize->add_setting( 'sct_portfolio_title', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Have You Seen our Works?', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Have You Seen our Works?', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_portfolio_title', array(
-    'label' => __( 'Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_portfolio'
-  ));
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_portfolio'
+	));
 
     $wp_customize->add_setting( 'sct_portfolio_subtitle', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_portfolio_subtitle', array(
-    'label' => __( 'Sub Heading', 'pluton' ),
-    'type' => 'textarea',
-    'section' => 'sct_portfolio'
-  ));
+		'label' => __( 'Sub Heading', 'pluton' ),
+		'type' => 'textarea',
+		'section' => 'sct_portfolio'
+	));
 
     $wp_customize->add_setting( 'sct_team_p', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_team_p', array(
-    'label' => __( 'Team', 'pluton' ),
-    'type' => 'dropdown-pages',
-    'section' => 'full_sections'
-  ));
+		'label' => __( 'Team', 'pluton' ),
+		'type' => 'dropdown-pages',
+		'section' => 'full_sections'
+	));
 
     $wp_customize->add_setting( 'sct_team_main', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Who We Are?', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Who We Are?', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_team_main', array(
-    'label' => __( 'Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_team',
-    'priority' => '1'
-  ));
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_team',
+		'priority' => '1'
+	));
 
     $wp_customize->add_setting( 'sct_team_sub', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_team_sub', array(
-    'label' => __( 'Sub Heading', 'pluton' ),
-    'type' => 'textarea',
-    'section' => 'sct_team',
-    'priority' => '2'
-  ));
+		'label' => __( 'Sub Heading', 'pluton' ),
+		'type' => 'textarea',
+		'section' => 'sct_team',
+		'priority' => '2'
+	));
 
     $wp_customize->add_setting( 'sct_about_main', array(
-    'type' => 'theme_mod',
-    'default' => __( 'About Us', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'About Us', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_about_main', array(
-    'label' => __( 'Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_about'
-  ));
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_about'
+	));
 
     $wp_customize->add_setting( 'sct_about_sub', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_about_sub', array(
-    'label' => __( 'Sub Heading', 'pluton' ),
-    'type' => 'textarea',
-    'section' => 'sct_about'
-  ));
+		'label' => __( 'Sub Heading', 'pluton' ),
+		'type' => 'textarea',
+		'section' => 'sct_about'
+	));
 
     $wp_customize->add_setting( 'a_skill_bar', array(
-    'type' => 'theme_mod',
-    'default' => __( '100%', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( '100%', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'a_skill_bar', array(
-    'label' => __( 'Bar', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Bar', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'a_skill_title', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Graphic Design', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Graphic Design', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'a_skill_title', array(
-    'label' => __( 'First Skill', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'First Skill', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'b_skill_bar', array(
-    'type' => 'theme_mod',
-    'default' => __( '95%', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( '95%', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'b_skill_bar', array(
-    'label' => __( 'Bar', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Bar', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'b_skill_title', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Html & Css', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Html & Css', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'b_skill_title', array(
-    'label' => __( 'Second Skill', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Second Skill', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'c_skill_bar', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'c_skill_bar', array(
-    'label' => __( 'Bar', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Bar', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'c_skill_title', array(
-    'type' => 'theme_mod',
-    'default' => __( 'jQuery', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'jQuery', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'c_skill_title', array(
-    'label' => __( 'Third Skill', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Third Skill', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'd_skill_bar', array(
-    'type' => 'theme_mod',
-    'default' => __( '70%', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( '70%', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'd_skill_bar', array(
-    'label' => __( 'Bar', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Bar', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'd_skill_title', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Wordpress', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Wordpress', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'd_skill_title', array(
-    'label' => __( 'Four Skill', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_skill'
-  ));
+		'label' => __( 'Four Skill', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_skill'
+	));
 
     $wp_customize->add_setting( 'sct_about_box_color', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'sct_about_box_color', array(
-    'label' => __( 'Box Color', 'pluton' ),
-    'type' => 'color',
-    'section' => 'sct_about'
-  ) ) );
+		'label' => __( 'Box Color', 'pluton' ),
+		'type' => 'color',
+		'section' => 'sct_about'
+	) ) );
 
     $wp_customize->add_setting( 'sct_about_box_main', array(
-    'type' => 'theme_mod',
-    'default' => __( 'We\'re Hiring', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'We\'re Hiring', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_about_box_main', array(
-    'label' => __( 'Box Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_about'
-  ));
+		'label' => __( 'Box Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_about'
+	));
 
     $wp_customize->add_setting( 'sct_about_box_content', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can\'t do everything...', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can\'t do everything...', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_about_box_content', array(
-    'label' => __( 'Box Content', 'pluton' ),
-    'type' => 'textarea',
-    'section' => 'sct_about'
-  ));
+		'label' => __( 'Box Content', 'pluton' ),
+		'type' => 'textarea',
+		'section' => 'sct_about'
+	));
 
     $wp_customize->add_setting( 'sct_about_btn', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_about_btn', array(
-    'label' => __( 'Box Button', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_about'
-  ));
+		'label' => __( 'Box Button', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_about'
+	));
 
     $wp_customize->add_setting( 'sct_about_btn_lnk', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_about_btn_lnk', array(
-    'label' => __( 'Button URL', 'pluton' ),
-    'type' => 'url',
-    'section' => 'sct_about'
-  ));
+		'label' => __( 'Button URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_about'
+	));
 
     $wp_customize->add_setting( 'sct_cta_main', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Elegance is not the abundance of simplicity. It is the absence of complexity.', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Elegance is not the abundance of simplicity. It is the absence of complexity.', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_cta_main', array(
-    'label' => __( 'Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_cta'
-  ));
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_cta'
+	));
 
     $wp_customize->add_setting( 'cta_btn', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Purshase now', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Purshase now', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'cta_btn', array(
-    'label' => __( 'Button Text', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_cta'
-  ));
+		'label' => __( 'Button Text', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_cta'
+	));
 
     $wp_customize->add_setting( 'cta_btn_lnk', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'cta_btn_lnk', array(
-    'label' => __( 'Button URL', 'pluton' ),
-    'type' => 'url',
-    'section' => 'sct_cta'
-  ));
+		'label' => __( 'Button URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_cta'
+	));
 
     $wp_customize->add_setting( 'sct_testemonial_p', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_testemonial_p', array(
-    'label' => __( 'Testemonial', 'pluton' ),
-    'type' => 'dropdown-pages',
-    'section' => 'sct_testemonial'
-  ));
+		'label' => __( 'Testemonial', 'pluton' ),
+		'type' => 'dropdown-pages',
+		'section' => 'sct_testemonial'
+	));
 
     $wp_customize->add_setting( 'sct_client_main', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Our Clients', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Our Clients', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_client_main', array(
-    'label' => __( 'Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_client'
-  ));
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_client'
+	));
 
     $wp_customize->add_setting( 'sct_price_show', array(
-    'type' => 'theme_mod',
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_price_show', array(
-    'label' => __( 'Display Price Block', 'pluton' ),
-    'type' => 'checkbox',
-    'section' => 'sct_price'
-  ));
+		'label' => __( 'Display Price Block', 'pluton' ),
+		'type' => 'checkbox',
+		'section' => 'sct_price'
+	));
 
     $wp_customize->add_setting( 'sct_price_main', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Price', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Price', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_price_main', array(
-    'label' => __( 'Main Heading', 'pluton' ),
-    'type' => 'text',
-    'section' => 'sct_price'
-  ));
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_price'
+	));
 
     $wp_customize->add_setting( 'sct_price_subheading', array(
-    'type' => 'theme_mod',
-    'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
-    'sanitize_callback' => $pgwp_sanitize
-  ));
+		'type' => 'theme_mod',
+		'default' => __( 'Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
 
     $wp_customize->add_control( 'sct_price_subheading', array(
-    'label' => __( 'Sub Heading', 'pluton' ),
-    'type' => 'textarea',
-    'section' => 'sct_price'
-  ));
+		'label' => __( 'Sub Heading', 'pluton' ),
+		'type' => 'textarea',
+		'section' => 'sct_price'
+	));
+
+    $wp_customize->add_setting( 'footer_adress', array(
+		'type' => 'theme_mod',
+		'default' => __( '123 Fifth Avenue, 12th,Belgrade,SRB 11000', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_adress', array(
+		'label' => __( 'Adress', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_email', array(
+		'type' => 'theme_mod',
+		'default' => __( 'ourstudio@somemail.com', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_email', array(
+		'label' => __( 'E-mail', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_cel', array(
+		'type' => 'theme_mod',
+		'default' => __( '+11 234 567 890', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_cel', array(
+		'label' => __( 'Celular', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_tel', array(
+		'type' => 'theme_mod',
+		'default' => __( '+11 286 543 850', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_tel', array(
+		'label' => __( 'Telephone', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_m_sociais', array(
+		'type' => 'theme_mod',
+		'default' => __( 'We Are Social', 'pluton' ),
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_m_sociais', array(
+		'label' => __( 'Main Heading', 'pluton' ),
+		'type' => 'text',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_fcb_url', array(
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_fcb_url', array(
+		'label' => __( 'Facebook URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_twitter_url', array(
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_twitter_url', array(
+		'label' => __( 'Twitter URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_footer'
+	));
+
+    $wp_customize->add_setting( 'footer_linkedin_url', array(
+		'type' => 'theme_mod',
+		'sanitize_callback' => $pgwp_sanitize
+	));
+
+    $wp_customize->add_control( 'footer_linkedin_url', array(
+		'label' => __( 'Linkedin URL', 'pluton' ),
+		'type' => 'url',
+		'section' => 'sct_footer'
+	));
 
     /* Pinegrow generated Customizer Controls End */
 
@@ -807,7 +911,7 @@ function pluton_register_required_plugins() {
       'is_callable' => '',
     ),
 
-    // Advanced Custom Fields is a WordPress plugin which allows you to add extra content fields to your WordPress edit screens. 
+    // Advanced Custom Fields is a WordPress plugin which allows you to add extra content fields to your WordPress edit screens.
     array(
       'name'        => 'Advanced Custom Fields',
       'slug'        => 'advanced-custom-fields',

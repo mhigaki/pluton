@@ -32,11 +32,11 @@
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <?php wp_nav_menu( array(
-                              'menu' => 'primary',
-                              'menu_class' => 'nav',
-                              'menu_id' => 'top-navigation',
-                              'container' => '',
-                              'depth' => '-1'
+                            	'menu' => 'primary',
+                            	'menu_class' => 'nav',
+                            	'menu_id' => 'top-navigation',
+                            	'container' => '',
+                            	'depth' => '-1'
                         ) ); ?>
                     </div>
                     <!-- End main navigation -->
